@@ -18,7 +18,7 @@ public class Task3 {
       return;
     }
 
-    // почему тут нужен новый стрингбилдер?
+
     resultWord.append(word1.substring(0, word1.length() / 2))
         .append(word2.substring((word2.length() / 2), word2.length()));
 

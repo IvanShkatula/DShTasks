@@ -14,6 +14,7 @@ public class Task1 {
     Scanner scanner = new Scanner(System.in);
     StringBuilder wordBuilder1 = new StringBuilder(scanner.nextLine());
     StringBuilder wordBuilder2 = new StringBuilder(scanner.nextLine());
+    scanner.close();
 
     if (wordBuilder1.length() != wordBuilder2.length()) {
       return;

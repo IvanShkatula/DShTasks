@@ -5,8 +5,8 @@ import java.util.List;
 
 import com.academy.homework.tasks.task5strings.CommonMethods;
 
-public class Task2 {
-
+  public class Task2 {
+  // Решить задачу подходом из Task1
   public static void main(String[] args) {
 
     ArrayList<String> list;

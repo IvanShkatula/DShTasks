@@ -13,7 +13,7 @@ public class Task1 {
     String incomeString = "Вчера целый, день шёл. проливной дождь.";
     int count = 0;
 
-    Pattern pattern = Pattern.compile("[\\p{P}\\p{S}]");
+    Pattern pattern = Pattern.compile("[\\.,!\\?]");
     //почему не сработал \\W или [:punct:] и что это значит?
 
     String[] arrayString;
