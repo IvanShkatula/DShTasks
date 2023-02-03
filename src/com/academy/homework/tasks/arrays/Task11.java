@@ -18,7 +18,7 @@ public class Task11 {
     Scanner scanner = new Scanner(System.in);
     int num = 1;
     boolean bool = true;
-    // почемму я не могу поставить boolean bool = false; ????
+    // почемму я не могу поставить boolean bool = false; и в цикл !bool ????
     while (bool) {
       num = scanner.nextInt();
       if (num % 2 == 0 && num > 0) {
