@@ -7,7 +7,10 @@ public class Box<T extends Number & Serializable, W, K> {
   private T[] items;
   private W positionalItem;
   private K oneMoreItem;
-
+  @SuppressWarnings("unchecked")
+  public Box() {
+    items = (T[]) new Object[10];
+  }
   public Box(T[] items) {
     this.items = items;
   }
