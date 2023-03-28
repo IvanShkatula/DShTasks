@@ -34,8 +34,7 @@ public class CustomArrL<T> {
     if (index >= arrayT.length) {
       arrayT = Arrays.copyOf(arrayT, arrayT.length * 2 + 1);
     }
-    arrayT[index] = obj;
-    index++;
+    arrayT[index++] = obj;
   }
 
   public T get(int i) throws Exception {
@@ -65,11 +64,9 @@ public class CustomArrL<T> {
     if (i > index || i < 0) {
       throw new ArrayIndexOutOfBoundsException();
     }
-    for (int j = 0; j < index; j++) {
-      if (j > i)
-        arrayT[j - 1] = arrayT[j];
-    }
-    index--;
+    System.arraycopy(arrayT, i + 1, arrayT, i, index - i);
+
+    arrayT[--index] = null;
   }
 
   public void remove(T obj) {
@@ -89,5 +86,13 @@ public class CustomArrL<T> {
 
   public void setArrayT(T[] arrayT) {
     this.arrayT = arrayT;
+  }
+
+  @Override
+  public String toString() {
+    return "CustomArrL{" +
+        "arrayT=" + Arrays.toString(arrayT) +
+        ", index=" + index +
+        '}';
   }
 }
