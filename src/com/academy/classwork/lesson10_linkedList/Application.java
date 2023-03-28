@@ -12,11 +12,18 @@ public class Application {
 
     linkedListCustom.print();
 
-    linkedListCustom.add(0, 999);
-    linkedListCustom.add(0, 998);
-    linkedListCustom.add(2, 1000);
+    linkedListCustom.add(0, 996);
+    linkedListCustom.add(0, 995);
+    linkedListCustom.add(2, 999);
+    linkedListCustom.add(2, 998);
+    linkedListCustom.add(2, 997);
+
 
     linkedListCustom.print();
+    for (int i = 0; i < linkedListCustom.size(); i++) {
+      System.out.println(linkedListCustom.get(i));
+    }
+
 
   }
 

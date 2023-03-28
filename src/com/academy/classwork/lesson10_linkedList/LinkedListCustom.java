@@ -42,6 +42,10 @@ public class LinkedListCustom<T> {
   }
 
   public void add(int index, T value) {
+
+    Node current = head;
+    int counter = 0;
+
     if (index < 0 || size + 1 < index) {
       System.out.println("index out of bound");
       return;
@@ -51,8 +55,15 @@ public class LinkedListCustom<T> {
       size++;
       return;
     }
-    Node current = head;
-    int counter = 0;
+
+    if (index == 0) {
+      Node node = new Node(value, current, null);
+      node.next.prev = node;
+      node.next.next = null;
+      head = node;
+      size++;
+      return;
+    }
 
     while (current != null) {
       if (counter + 1 == index) {
@@ -60,6 +71,9 @@ public class LinkedListCustom<T> {
         Node next = current.next;
         if (next != null) {
           next.prev = node;
+        }
+        if (next == null) {
+          tail = node;
         }
         current.next = node;
         size++;
