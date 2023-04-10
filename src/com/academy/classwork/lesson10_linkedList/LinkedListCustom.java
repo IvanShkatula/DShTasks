@@ -85,6 +85,58 @@ public class LinkedListCustom<T> {
 
   }
 
+  public void remove(T value) {
+
+
+  }
+
+  public void removeFirst() {
+    Node current = head;
+    current.next.prev = null;
+    head = current.next;
+    size--;
+  }
+
+  public void removeLast() {
+    Node current = tail;
+    current.prev.next = null;
+    tail = current.prev;
+    size--;
+  }
+
+  public void remove(int index) {
+
+    if (index < 0 || index > size) {
+      System.out.println("Index out of bound");
+      return;
+    }
+    if (index == 0) {
+      removeFirst();
+      return;
+    }
+    if (index == size - 1) {
+      removeLast();
+      return;
+    }
+
+    int counter = 0;
+    Node current = head;
+
+    while (current != null) {
+      if (counter + 1 == index) {
+        head.prev.next = head.next;
+        head.next.prev = head.prev;
+        head.next = null;
+        head.prev = null;
+        head = null;
+        size--;
+        return;
+      }
+      counter++;
+      current = current.next;
+    }
+  }
+
   private void addFirstElement(T value) {
     Node node = new Node(value, null, null);
     head = node;
