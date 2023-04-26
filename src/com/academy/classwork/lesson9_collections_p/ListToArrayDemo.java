@@ -1,4 +1,4 @@
-package com.academy.classwork.lesson9_collections;
+package com.academy.classwork.lesson9_collections_p;
 
 import java.util.ArrayList;
 import java.util.Arrays;
